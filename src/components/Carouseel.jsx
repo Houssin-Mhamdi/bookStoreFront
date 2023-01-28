@@ -60,9 +60,9 @@ export default function Carouseel() {
         >
           <Carousel
             data={data}
-            time={1800}
+            time={2000}
             width="1000rem"
-            height="600px"
+            height="450px"
             captionStyle={captionStyle}
             radius="0px"
             slideNumber={false}
