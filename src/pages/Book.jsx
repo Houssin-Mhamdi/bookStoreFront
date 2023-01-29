@@ -13,9 +13,7 @@ export default function Book() {
     return (
         <div>
             <div className='flex justify-start items-start p-8'>
-                <div className='absolute top-5 right-6 hover:shadow-lg hover:drop-shadow-xl'>
-                    <AiFillCloseCircle cursor={'pointer'} size={20} color={'crimson'} />
-                </div>
+               
                 <div className='flex gap-11'>
                     <div>
                         <img src={image} alt={title} />
