@@ -8,7 +8,7 @@ export default function Search() {
                 <div className='flex justify-between items-center text-lg text-white'>
 
                     <h3 className='text-xl mr-2'>Book</h3>
-                    <h3><BsBookFill className='text-xl' /></h3>
+                    <h3><BsBookFill className='text-xl animate-bounce w-5 h-5' /></h3>
                     <h3 className='text-xl ml-2'>store</h3>
                 </div>
                 <div className='relative'>
