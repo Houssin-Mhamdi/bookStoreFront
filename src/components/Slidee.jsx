@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AiFillEye } from "react-icons/ai";
 import { BsFillHandbagFill } from "react-icons/bs";
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import { books } from '../data/books.js';
-import HeadingTitle from './HeadingTitle.jsx';
+import Modal from './Modal.jsx';
 import Rating from './Rating.jsx';
 export default function Slidee() {
+  const [openModal, setOpenModal] = useState(false)
+  const [bookData, setBookData] = useState(null)
+
+  const handleOpenModal = (book) =>{
+    setOpenModal(true)
+    setBookData(book)
+
+  }
+
   const responsiveSettings = [
     {
       breakpoint: 800,
@@ -46,7 +55,7 @@ export default function Slidee() {
                   </div>
                   <hr className='border-1 border-black' />
                   <div className='flex text-center justify-center items-center gap-5 mt-1' >
-                    <AiFillEye cursor={'pointer'} />
+                    <AiFillEye onClick={()=>handleOpenModal(book)} cursor={'pointer'} />
                     <BsFillHandbagFill size={25} cursor={'pointer'} />
                   </div>
                 </div>
@@ -55,6 +64,7 @@ export default function Slidee() {
           )
         })}
       </Slide>
+      {openModal ? <Modal bookData={bookData} setOpenModal={setOpenModal}/> : ''}
     </div>
   )
 }

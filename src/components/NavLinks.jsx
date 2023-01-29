@@ -10,6 +10,7 @@ export default function NavLinks() {
                 <li className='hover:bg-slate-400 p-5 hover:text-white cursor-pointer'><Link to="/about">About</Link></li>
                 <li className='hover:bg-slate-400 p-5 hover:text-white cursor-pointer'><Link to="/contact">Contact</Link></li>
                 <li className='hover:bg-slate-400 p-5 hover:text-white cursor-pointer'><Link to="/register">Register</Link></li>
+                
             </ul>
         </nav>
 
