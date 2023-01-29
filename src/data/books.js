@@ -11,6 +11,8 @@ export const books = [
         language: "English",
         PublicationDate: "16 April 2018",
         inStock: true,
+        description:'lorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adip'
+
     },
     {
         id:2,
@@ -24,6 +26,8 @@ export const books = [
         language: "English",
         PublicationDate: "1 March 2015",
         inStock: true,
+        description:'lorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adip'
+
     },
     {
         id:3,
@@ -37,6 +41,8 @@ export const books = [
         language: "English",
         PublicationDate: "1 June 2019",
         inStock: true,
+        description:'lorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adip'
+
     },
     {
         id:4,
@@ -50,6 +56,8 @@ export const books = [
         language: "English",
         PublicationDate: "8 October 2012",
         inStock: true,
+        description:'lorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adip'
+
     },
     {
         id:5,
@@ -63,6 +71,7 @@ export const books = [
         language: "English",
         PublicationDate: "27 April 2017",
         inStock: true,
+        description:'lorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adip'
     },
     {
         id:6,
@@ -76,6 +85,7 @@ export const books = [
         language: "English",
         PublicationDate: "17 July 2016",
         inStock: true,
+        description:'lorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adip'
     },
     {
         id:7,
@@ -89,6 +99,7 @@ export const books = [
         language: "English",
         PublicationDate: "1 September 2005",
         inStock: true,
+        description:'lorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adip'
     },
     {
         id:8,
@@ -102,6 +113,7 @@ export const books = [
         language: "English",
         PublicationDate: "23 March 2017",
         inStock: true,
+        description:'lorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adip'
     },
     {
         id:9,
@@ -115,6 +127,7 @@ export const books = [
         language: "English",
         PublicationDate: "4 December 2018",
         inStock: true, 
+        description:'lorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adip'
     },
     {
         id:10,
@@ -128,5 +141,6 @@ export const books = [
         language: "English",
         PublicationDate: "16 April 2018",
         inStock: false,
+        description:'lorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adiplorem ipsum dolor sit amet, consectetur adip'
     },
 ]
