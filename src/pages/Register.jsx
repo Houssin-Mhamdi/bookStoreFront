@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Register() {
   return (
@@ -53,6 +54,7 @@ export default function Register() {
                   <button className="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">REGISTER NOW</button>
                 </div>
               </div>
+               <Link to='/login'><p className='text-center'>Already have an account?</p></Link> 
             </div>
           </div>
         </div>
