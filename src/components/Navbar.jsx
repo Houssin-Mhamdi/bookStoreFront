@@ -7,6 +7,7 @@ import Cart from '../cart/Cart.jsx'
 import Contact from '../pages/Contact.jsx'
 import Home from '../pages/Home.jsx'
 import Register from '../pages/Register.jsx'
+import Login from '../pages/Login.jsx'
 export default function Navbar() {
     return (
         <div>
@@ -16,6 +17,7 @@ export default function Navbar() {
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/register" element={<Register />} />
+                <Route path="/login" element={<Login />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/book/:id" element={<Book />} />
             </Routes>
