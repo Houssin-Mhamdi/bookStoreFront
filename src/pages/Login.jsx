@@ -1,23 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react';
+
+import { ToastContainer , toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Login() {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    const handlesumbit = (e) => {
+        e.preventDefault()
+        console.log({ email, password });
+
+        if (email.trim() === '') return toast('email is required')
+        if (password.trim() === '') return toast('password is required')
+    }
+
     return (
 
         <section className="h-screen">
             <div className="container px-6 py-12 h-full">
+                <ToastContainer  closeOnClick pauseOnFocusLoss pauseOnHover/>
                 <div className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
                     <div className="md:w-8/12 lg:w-6/12 mb-12 md:mb-0">
                         <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" className="w-full" alt="Phone image" />
                     </div>
                     <div className="md:w-8/12 lg:w-5/12 lg:ml-20">
-                        <form>
+                        <form onSubmit={handlesumbit}>
                             {/* Email input */}
                             <div className="mb-6">
-                                <input type="text" className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Email address" />
+                                <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Email address" />
                             </div>
                             {/* Password input */}
                             <div className="mb-6">
-                                <input type="password" className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Password" />
+                                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Password" />
                             </div>
                             <div className="flex justify-between items-center mb-6">
                                 <div className="form-group form-check">
