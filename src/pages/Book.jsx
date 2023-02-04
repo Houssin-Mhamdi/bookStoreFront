@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AiOutlineFileAdd } from "react-icons/ai";
 import { BiWorld } from "react-icons/bi";
 import { BsFillCalendarDateFill, BsFillHandbagFill } from "react-icons/bs";
 import { useParams } from 'react-router-dom';
 import Rating from '../components/Rating.jsx';
 import { books } from '../data/books.js';
-
+import { useContext } from 'react';
+import BookStoreContext from '../context/cartContext.js'
 export default function Book() {
+    const [qty,setQty]= useState(1)
+    const {addtoCart} = useContext(BookStoreContext)
     const { id } = useParams()
     const book = books.find(b => b.id === parseInt(id)) //parstInt === +id
     const { image, inStock, author, description, PublicationDate, language, price, rating, reviews, title, printLength } = book
@@ -33,8 +36,8 @@ export default function Book() {
                             <b className='text-xl'>Price: </b>{price}$
                         </div>
                         <div >
-                            <input className='w-40 bg-slate-100 p-1 mr-2 rounded-md border-2 border-black' type="number" min='1' max="100" placeholder='1' />
-                            <button className='text-green-500 border-2 border-green-500 p-1 w-32'>
+                            <input className='w-40 bg-slate-100 p-1 mr-2 rounded-md border-2 border-black' type="number" min='1' max="100" placeholder='1' onChange={(e)=>setQty(e.target.value)} value={qty}/>
+                            <button className='text-green-500 border-2 border-green-500 p-1 w-32' onClick={()=>addtoCart({...book,qty})}>
                                 <div className='flex justify-center items-center'>
                                     <span className='mr-2'>
                                         <BsFillHandbagFill />
