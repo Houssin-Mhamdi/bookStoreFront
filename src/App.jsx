@@ -6,13 +6,15 @@ import Search from './components/Search'
 import TopNav from './components/TopNav'
 function App() {
   return (
-    <div className="App">
-      <TopNav />
-      <Search />
-      <NavLinks />
-      <Navbar />
-      <Footer />
-    </div>
+    
+      <div className="App">
+        <TopNav />
+        <Search />
+        <NavLinks />
+        <Navbar />
+        <Footer />
+      </div>
+    
   )
 }
 

@@ -1,19 +1,21 @@
 import React from 'react';
-import { AiFillCloseCircle, AiOutlineFileAdd } from "react-icons/ai";
+import { AiOutlineFileAdd } from "react-icons/ai";
 import { BiWorld } from "react-icons/bi";
 import { BsFillCalendarDateFill, BsFillHandbagFill } from "react-icons/bs";
 import { useParams } from 'react-router-dom';
 import Rating from '../components/Rating.jsx';
 import { books } from '../data/books.js';
+
 export default function Book() {
     const { id } = useParams()
     const book = books.find(b => b.id === parseInt(id)) //parstInt === +id
     const { image, inStock, author, description, PublicationDate, language, price, rating, reviews, title, printLength } = book
 
     return (
+
         <div>
             <div className='flex justify-start items-start p-8'>
-               
+
                 <div className='flex gap-11'>
                     <div>
                         <img src={image} alt={title} />
@@ -48,7 +50,7 @@ export default function Book() {
                             <div className='text-center'>
                                 <h3 className='-ml-9 mb-2'>publication date</h3>
                                 <BsFillCalendarDateFill size={30} />
-                                 <h2 className='-ml-9 mt-2'>{PublicationDate}</h2>
+                                <h2 className='-ml-9 mt-2'>{PublicationDate}</h2>
                             </div>
                             <div className='text-center'>
                                 <h3 className='-ml-5 mb-2'>langue</h3>
@@ -66,5 +68,6 @@ export default function Book() {
                 </div>
             </div>
         </div>
+
     )
 }
