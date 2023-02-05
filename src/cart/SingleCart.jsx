@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react';
 import { BsTrashFill } from 'react-icons/bs';
+import BookStoreContext from '../context/cartContext';
 
 export default function SingleCart({ info }) {
-    const { title, author, price, quantity,image } = info
+    const { title, author, price, quantity, image, id } = info
+    //const {removeFromCart} = useContext(BookStoreContext)
+    const { removeFromCart } = useContext(BookStoreContext)
     console.log(info)
     return (
         <>
@@ -28,7 +31,7 @@ export default function SingleCart({ info }) {
 
                 </div>
                 <div className='-mt-7 ml-[45rem]'>
-                    <BsTrashFill size={20} color={'red'} cursor={'pointer'} />
+                    <BsTrashFill size={20} color={'red'} cursor={'pointer'} onClick={() => removeFromCart(id)} />
                 </div>
             </section>
         </>
