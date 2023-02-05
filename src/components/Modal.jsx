@@ -33,7 +33,7 @@ export default function Modal({ bookData, setOpenModal }) {
                         </div>
                         <div >
                             <input className='w-40 bg-slate-100 p-1 mr-2 rounded-md border-2 border-black' type="number" min='1' max="100" placeholder='1' onChange={(e)=>setQty(e.target.value)} value={qty}/>
-                            <button className='text-green-500 border-2 border-green-500 p-1 w-32' onClick={()=>addtoCart({...bookData,quantity:qty})}>
+                            <button className='text-green-500 border-2 border-green-500 p-1 w-32' onClick={()=>addtoCart({...bookData,quantity:parseInt(qty)})}>
                                 <div className='flex justify-center items-center'>
                                     <span className='mr-2'>
                                         <BsFillHandbagFill />

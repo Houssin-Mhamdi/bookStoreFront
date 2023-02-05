@@ -18,6 +18,7 @@ export default function CartProvider({ children }) {
   //remove from the cart 
   const removeFromCart = (id) => {
     const item = cartInfo.filter((item) => item.id !== id)
+    
       setCartInfo(item)
   }
   return (

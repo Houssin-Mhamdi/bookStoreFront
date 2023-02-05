@@ -20,9 +20,9 @@ export default function SingleCart({ info }) {
                     </div>
                     <div className='flex flex-col items-center gap-4'>
                         <div className='flex justify-between items-center gap-5'>
-                            <button className='bg-white border-2 border-black  text-black w-8 h-8 leading-4' onClick={() => addtoCart({ ...info, quantity: info.quantity - 1 })}>-</button>
+                            <button className='bg-white border-2 border-black  text-black w-8 h-8 leading-4' onClick={() => addtoCart({ ...info, quantity: parseInt(info.quantity) - 1 })}>-</button>
                             <p>{quantity}</p>
-                            <button className='bg-white  border-2 border-black  text-black w-8 h-8 leading-4' onClick={() => addtoCart({ ...info, quantity: info.quantity + 1 })}>+</button>
+                            <button className='bg-white  border-2 border-black  text-black w-8 h-8 leading-4' onClick={() => addtoCart({ ...info, quantity: parseInt(info.quantity) + 1 })}>+</button>
                         </div>
                         <p>${(price * quantity).toFixed(2)}</p>
 
