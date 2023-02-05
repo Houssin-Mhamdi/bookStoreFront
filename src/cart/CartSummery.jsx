@@ -7,7 +7,7 @@ export default function CartSummery({totalPrice}) {
                 <h2 className='border-b-2 border-black text-xl'>ORDER SUMMARY</h2>
                 <div className='border-b-2 border-black flex justify-between items-center px-4' >
                     <span className='text-xl'>SubTotal</span>
-                    <span className='text-xl'>{totalPrice}</span>
+                    <span className='text-xl'> ${totalPrice}</span>
                 </div>
                 <div className='border-b-2 border-black flex justify-between items-center px-4'>
                     <span className='text-xl'>ShoppingCost</span>
@@ -19,7 +19,7 @@ export default function CartSummery({totalPrice}) {
                 </div>
                 <div className='flex justify-between items-center px-4'>
                     <span className='text-xl'>Total</span>
-                    <span className='text-xl'> {totalPrice}</span>
+                    <span className='text-xl'> ${totalPrice}</span>
                 </div>
             </section>
         </>
