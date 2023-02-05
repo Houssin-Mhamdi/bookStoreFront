@@ -2,13 +2,14 @@ import React from 'react'
 import { BsTrashFill } from 'react-icons/bs';
 
 export default function SingleCart({ info }) {
-    const { title, author, price, quantity } = info
+    const { title, author, price, quantity,image } = info
+    console.log(info)
     return (
         <>
             <section>
                 <div className='flex items-center justify-between w-[50%] border-b-2 border-black'>
                     <div className='flex items-center gap-8'>
-                        <img src="../../public/assets/shipped.png" className='w-[15rem] h-[15rem]' alt="" />
+                        <img src={image} className='w-[10rem] h-[15rem] p-5' alt="" />
                         <div>
                             <h2><b>Title:</b> {title}</h2>
                             <h2><b>Author:</b> {author}</h2>

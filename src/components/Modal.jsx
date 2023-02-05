@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { AiFillCloseCircle } from "react-icons/ai";
 import { BsFillHandbagFill } from "react-icons/bs";
 import { Link } from 'react-router-dom';
+import BookStoreContext from '../context/cartContext';
 import Rating from './Rating';
 
 export default function Modal({ bookData, setOpenModal }) {
-    console.log(bookData);
+    const [qty,setQty]=useState(1)
+    const {addtoCart} = useContext(BookStoreContext)
     const { image, inStock, author, PublicationDate,id, language, price, rating, reviews, title, printLength } = bookData
     return (
         <div className='fixed top-0 left-0 w-[100vw] h-[100vw] bg-neutral-900/50 z-10 flex items-center justify-center ' >
@@ -30,8 +32,8 @@ export default function Modal({ bookData, setOpenModal }) {
                             <b className='text-xl'>Price: </b>{price}$
                         </div>
                         <div >
-                            <input className='w-40 bg-slate-100 p-1 mr-2 rounded-md border-2 border-black' type="number" min='1' max="100" placeholder='1' />
-                            <button className='text-green-500 border-2 border-green-500 p-1 w-32'>
+                            <input className='w-40 bg-slate-100 p-1 mr-2 rounded-md border-2 border-black' type="number" min='1' max="100" placeholder='1' onChange={(e)=>setQty(e.target.value)} value={qty}/>
+                            <button className='text-green-500 border-2 border-green-500 p-1 w-32' onClick={()=>addtoCart({...bookData,quantity:qty})}>
                                 <div className='flex justify-center items-center'>
                                     <span className='mr-2'>
                                         <BsFillHandbagFill />
