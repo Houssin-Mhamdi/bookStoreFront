@@ -9,13 +9,13 @@ export default function Cart() {
   const totalPrice = (cartInfo.reduce((acc, cur) => acc + cur.price * cur.quantity, 0)).toFixed(2)
   return (
     <section className='h-[100auto]'>
-      <div className='container mx-auto px-4'>
+      {cartInfo.length>0?<div className='container mx-auto px-4'>
         <h1 className='mt-5 text-2xl border-b-4 border-blue-500 inline-block p-2'>Your Chopping Cart</h1>
         {cartInfo.map((info) =>
           <SingleCart info={info} key={info.id} />
         )}
         <CartSummery totalPrice={totalPrice} />
-      </div>
+      </div>:<div className='text-2xl font-bold text-center p-5'>There Is No Book</div>}
     </section>
   )
 }
