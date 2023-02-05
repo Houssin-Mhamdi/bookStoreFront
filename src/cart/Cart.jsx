@@ -6,7 +6,7 @@ import CartSummery from './CartSummery.jsx';
 import SingleCart from './SingleCart.jsx';
 export default function Cart() {
   const { cartInfo } = useContext(BookStoreContext)
-  const totalPrice = cartInfo.reduce((acc, cur) => acc + cur.price * cur.quantity, 0)
+  const totalPrice = (cartInfo.reduce((acc, cur) => acc + cur.price * cur.quantity, 0)).toFixed(2)
   return (
     <section className='h-[100auto]'>
       <div className='container mx-auto px-4'>
